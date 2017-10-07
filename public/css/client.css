@@ -1,0 +1,195 @@
+.alignright{
+	float: right;
+}
+
+
+/* trang điện thoại sản phẩm */
+.detail-img {
+	text-align: center;
+}
+.detail-img img {
+	max-height: 350px;
+    max-width: 85%;
+    width: auto;
+    
+}
+
+
+/* trang giỏ hàng */
+.numbercart{
+/* 	width: 60%; */
+	text-align: center;
+}
+.numberbuttoncart{
+	margin-top: 6px;
+	text-align: center;
+}
+.cell-center {
+	text-align: center;
+}
+
+/* Trang index- điện thoại */
+.price-product{
+	font-size: 15px;
+	color: #800715;
+	font-weight: bold; 
+}
+.price-product-old{
+	font-size: 12px;
+	font-weight: bold; 
+	text-decoration: line-through;
+	color: #555555;
+}
+.price-product-promotion{
+	font-size: 15px;
+	color: #075816;
+	font-weight: bold; 
+}
+.products h4{
+	font-size: 15px;
+	
+}
+
+/* trang so sanh */
+.compare-img{
+	text-align: center;
+}
+
+
+
+/* popup compare info*/
+.compare-info{
+	z-index: 100;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	
+}
+.compare-info .panel .panel-body{
+	box-shadow: -2px 2px 15px #686868;
+}
+.compare-info .panel .panel-body img{
+	height: 30px;
+}
+.compare-info .panel .panel-body td{
+	text-align: center;
+}
+
+/* Chung - cho đối tượng ở giữa */
+.obj-center{
+	text-align: center;
+}
+.obj-right{
+	text-align: right;
+}
+
+
+/*Trang đăng nhập */ 
+.button-login {
+     width: 100%; 
+ }
+/* đăng nhập */
+.alert-error-login{
+    margin-bottom: 0px;
+}
+
+.receipt{
+	margin-top: 50px;
+}
+.receipt_info{
+	/* font-size: 16px; */
+	padding-left: 50px;
+}
+.receipt_total{
+	text-align: right;
+	padding-right: 100px;
+}
+.receipt_cashier{
+	margin-top: 25px;
+}
+
+
+
+/* Thanh search */
+.search-menu{
+	padding: 15px;
+	/* margin: 25px; */
+}
+.search-result{
+	padding:  10px;
+	font-size: 16px;
+}
+
+
+.product_new{
+	width: 50px;
+	height: 25px;
+	/* text-align: center; */
+	z-index: 1;
+	position: absolute;
+	background-color: #19B433;
+	/* border: 1px solid black; */
+	/* border-radius: 3px; */
+	 -ms-transform: matrix(1, 0.25, -0.25, 0.75, 130, 0); /* IE 9 */
+    -webkit-transform: matrix(1, 0.25, -0.25, 0.75, 130, 0); /* Safari */
+    transform: matrix(1, 0.25, -0.25, 0.75, 130, 0); /* Standard syntax */
+
+    -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 0.5s; /* Safari 4.0 - 8.0 */
+    animation-name: example;
+    animation-duration: 0.5s;
+	
+}
+.product_hot{
+	width: 50px;
+	height: 25px;
+	/* text-align: center; */
+	z-index: 1;
+	position: absolute;
+	background-color: #FA5B15;
+	/* border: 1px solid black; */
+	/* border-radius: 3px; */
+	 -ms-transform: matrix(1, 0.25, -0.25, 0.75, 170, 0); /* IE 9 */
+    -webkit-transform: matrix(1, 0.25, -0.25, 0.75, 170, 0); /* Safari */
+    transform: matrix(1, 0.25, -0.25, 0.75, 170, 0); /* Standard syntax */
+
+    -webkit-animation-name: example2; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 0.5s; /* Safari 4.0 - 8.0 */
+    animation-name: example2;
+    animation-duration: 0.5s;
+	
+}
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes example {
+    0%   {background-color: red;}
+    100% {background-color: green;}
+}
+
+/* Standard syntax */
+@keyframes example {
+    0%   {background-color: red;}
+    100% {background-color: green;}
+}
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes example2 {
+    0%   {background-color: green;}
+    100% {background-color: red;}
+}
+
+/* Standard syntax */
+@keyframes example2 {
+    0%   {background-color: green;}
+    100% {background-color: red;}
+}
+
+.product_new p{
+	font-style: bold;
+	font-size: 15px;
+}
+.product_hot p{
+	font-style: bold;
+	font-size: 15px;
+
+}
+
+

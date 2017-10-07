@@ -1,0 +1,261 @@
+.logo{
+    width: 140px;
+    height: 60px;
+}
+.nav .logo{
+    font-family: 'Russo One', sans-serif;
+}
+
+.navbar-form{
+    margin-top: 12px;
+}
+#TimKiem{
+    width: 100%;
+}
+.dangnhap_nav{
+    padding-top: 15px;
+    text-align: right;
+}
+
+/* /Phần footer */
+#footer {
+    background: #F1F1F1;
+    margin-top: 60px;
+    padding-top: 20px;
+}
+.site-footer{
+    background-color: #222;
+    color: #fff;
+    margin-top: 25px;
+    padding-top: 20px;
+}
+.bottom-footer{
+    border-top: 1px solid #b2b2b2;
+    margin-top: 10px;
+    padding-top: 10px;
+    color: #b2b2b2;
+}
+.footer-nav {
+    text-align: right;
+    list-style: none;
+}
+.footer-nav li{
+    display: inline;
+    padding: 0px 5px;
+}
+.footer-nav li:not(:first-child):before{
+    content: '|';
+    padding:  0px 5px;
+}
+.footer-nav a{
+    color:  #b2b2b2;
+}
+.footer-nav a:hover{
+    color: #fff;
+    text-decoration: none;
+}
+
+
+.right-content{
+    padding-top: 5px;
+    box-sizing: border-box;
+    border-top: solid 1px;
+}
+.top_right {
+    background-color: lightcyan;
+}
+
+
+
+.selloff {
+    padding-top: 35px;
+}
+
+.NhanPB{
+    font-size: 18px;
+}
+
+
+.panelBinhLuan ul,li{
+    list-style: none;
+}
+.comment .usercomment{
+    font-weight: bold;
+    font-size: 18px;
+    font-style: italic;
+    color: #C71858;
+}
+.comment .ndcomment {
+    font-size: 15px;
+    padding-left: 15px;
+}
+.comment .thoigiancomment {
+    font-size: 12px;
+    padding-left: 15px;
+    color: #856F77;
+}
+
+
+/*QUANG 16/11*/
+.nvdangbai span {
+    display: inline-block;
+    font-size: 12px;
+    color: #999;
+    vertical-align: middle;
+    margin: -2px 5px 0;
+    cursor: pointer;
+}
+.titletintuc {
+    display: block;
+    overflow: hidden;
+    line-height: 53px;
+    font-size: 25px;
+    color: #333;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 600;
+    width: 800px;
+    margin: auto;
+}
+.tinchinh p,
+.tinchinh h2,
+.tinchinh h3 {
+    margin: 20px auto;
+    font-size: 20px;
+    color: #333;
+    text-align: justify;
+    line-height: 28px;
+}
+.xemthem
+{
+    margin: 20px auto;
+    font-size: 20px;
+    color: #333;
+    text-align: justify;
+    line-height: 28px;
+}
+
+.frm_DangNhap {
+    border: 10px solid #147696;
+    border-radius: 6px ;
+    position: absolute;
+    width : 500px;
+    height: auto;
+    left: 50%; 
+    top: 40%;
+    transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    padding: 30px;
+    box-shadow: 5px 10px 5px #666; 
+    background: #E5F2D8;
+}
+.frm_DangNhap small {
+    font-style: italic;
+}
+.frm_DangNhap hr{
+    color: #856F77;
+}
+#btn_DN{
+    margin-left:30% ;
+}
+
+
+
+/*    form đổi mật khẩu*/
+.frm_label .form-group label{
+    text-align: left;
+}
+.quenmk {
+    border: 10px solid #147696;
+    border-radius: 6px ;
+    position: absolute;
+    left: 50%; 
+    top: 35%;
+    width : 700px;
+    height: auto;
+    transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    padding: 30px;
+    box-shadow: 5px 10px 5px #666; 
+    background: #E5F2D8;
+}
+.show-on-hover a span:hover {
+    display: block;    
+}
+.nav .nav navbar-nav>li:hover{
+    color: #C71858;
+}
+.hoverthanhnav li:hover{
+    color: #C71858;
+}
+.gachngang hr{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.color-item {
+    background: url no-repeat center center;
+    background-size: 16px;
+}
+.color-item {
+    border: 1px solid #ff8b00;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block !important;
+    visibility: visible !important;
+    height: 22px;
+    margin: 0;
+    width: 22px;
+}
+.tieude_cauhinh {
+    font-size: 18px;
+    color: #9E066E;
+    text-align: center;
+}
+
+.qltintuc {
+    display: block;
+    overflow: hidden;
+    line-height: 20px;
+    font-size: 11px;
+    color: #333;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 600;
+    width: 800px;
+    margin: auto;
+}
+.nvdangbai span {
+    display: inline-block;
+    font-size: 12px;
+    color: #999;
+    vertical-align: middle;
+    margin: -2px 5px 0;
+    cursor: pointer;
+}
+
+
+
+.back-to-top {
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display:none;
+}
+
+.listketquatimkiem{
+    position: absolute;
+    z-index: 1;
+    width: 350px;
+    margin-left: 15px;
+    margin-top: -6px;
+}
+
+
+.nvdangbai span {
+                display: inline-block;
+                font-size: 12px;
+                color: #999;
+                vertical-align: middle;
+                margin: -2px 5px 0;
+                cursor: pointer;
+            }

@@ -1,0 +1,75 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Nov 22, 2016, 10:12:25 PM
+    Author     : Dat Nguyen
+*/
+
+.cell0{
+    font-weight: bold;
+    font-size: 15px;
+    font-style: italic;
+    text-align: left;
+    width: 20%;
+}
+.tentk {
+     font-weight: bold;
+     font-style: italic;
+     color: #0F2B30;
+}
+.content-inner {
+    
+}
+#Admin_btnThemSP:hover{
+   
+}
+
+/* object ở giữa */
+.object-center{
+    text-align: center;
+}
+.object-right{
+    text-align: right;
+}
+
+.title-center>th{
+    text-align: center;
+}
+.navbar-ex1-collapse>ul a{
+    color: #FFD1ED;
+}
+
+/* user - create */
+.button-long{
+    width: 50%;
+}
+.button-max{
+    width: 100%;
+}
+
+.upload_file{
+    background-color: #ECF6F6;
+    padding:  5px;
+    border-radius: 10px;
+}
+
+.product_image{
+    /* height: 40px; */
+    max-width: 100%;
+    height: auto; 
+}
+.height_product_image{
+    height:  45px;
+}
+.width_quantity_detail{
+    width: 75px;
+}
+
+.total_price_bill {
+    text-align: right;
+    font-weight: bold;
+    padding-right: 15px;
+}

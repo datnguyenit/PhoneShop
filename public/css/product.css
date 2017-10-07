@@ -1,0 +1,227 @@
+@CHARSET "UTF-8";
+
+
+
+.products {
+	overflow: hidden;
+	float: left;
+	list-style: none;
+	margin: 0;
+	min-width: 1084px;
+       
+}
+
+.products li {
+	float: left;
+	position: relative;
+	width: 215px;
+	height: 280px;
+	border: 1px solid #ddd;
+	background: #fff;
+	overflow: hidden;
+	margin: 0
+}
+
+.products.homepage {
+	min-width: 600px
+}
+
+.tab-content .products.homepage li {
+	width: 25%
+}
+.sp_dienthoai .products.homepage li {
+	width: 225px;
+}
+
+.products li h1,.products li h2,.products li h3,.products li h4,.products li h5,.products li h6
+	{
+	margin: 0
+}
+.thongtinsp a{
+    display: none;
+    width: 205px;
+    height: 217px;
+   vertical-align: central;
+   overflow: auto;
+   
+}
+.products li a{
+	display: table-cell;
+	width: 205px;
+	height: 240px;
+	padding: 2px;
+	overflow: hidden;
+	vertical-align: bottom
+}
+.product{
+    padding:0;
+}
+.homepage{
+    padding:0;
+}
+.products li a h3 {
+	font-size: 18px;
+	font-weight: bold;
+	color: #3c3c3c;
+	line-height: 14px;
+	-webkit-transition: all 300ms ease 100ms;
+	-moz-transition: all 300ms ease 100ms;
+	transition: all 300ms ease 100ms;
+	display: block;
+	padding-bottom: 5px;
+}
+
+.products li a img {
+        max-width: 155px;
+	max-height: 155px;
+	margin: 10px auto 10px;
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 10px
+}
+
+/* .products li a h4 {
+	color: #b00;
+	font-size: 14px;
+	font-weight: bold;
+	-webkit-transition: all 300ms ease 100ms;
+	-moz-transition: all 300ms ease 100ms;
+	transition: all 300ms ease 100ms;
+	display: table-cell;
+	line-height: inherit
+} */
+
+.products li .textkm {
+	display: table-row;
+	vertical-align: bottom;
+	font-size: 11px;
+	color: #999;
+	height: 10px;
+	line-height: 10px
+}
+
+.products li .textkm strong {
+	margin-right: 5px;
+	color: red;
+	font-weight: 700
+}
+.products li .sosanh {
+	display: table-row;
+	text-align: right;
+}
+
+.products li .banonline {
+	text-transform: uppercase;
+	font-size: 9px;
+	font-weight: 700;
+	color: #0876e6;
+	display: table-row
+}
+
+.products li .giaohang2-7 {
+	text-transform: uppercase;
+	font-size: 9px;
+	font-weight: 700;
+	color: #0876e6;
+	display: table-row
+}
+
+.products li .ngung-kd {
+	text-transform: uppercase;
+	font-size: 9px;
+	font-weight: 700;
+	color: #b00;
+	display: table-row
+}
+
+
+
+
+
+
+
+
+
+.products li .info {
+	display: block;
+	overflow: hidden;
+	-ms-opacity: 0;
+	opacity: 0;
+	
+	z-index: 2;
+
+	height: 190px;
+	width: 100%;
+	padding: 1px;
+	font-size: 12px;
+	color: #fff;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	-webkit-transition: all .5s ease;
+	-moz-transition: all .5s ease;
+	-o-transition: all .5s ease;
+	-ms-transition: all .5s ease;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+}
+
+.products li a:hover .info {
+	background: rgba(0, 0, 0, .85);
+	-ms-opacity: 1;
+	opacity: 1;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	filter: alpha(opacity = 100);
+	-khtml-opacity: 1
+}
+
+.products li .info span {
+	color: #fff;
+	display: block;
+	padding: 2px 6px
+}
+
+
+
+
+
+.products.homepage li .info label.sosanh {
+    color: #288ad6;
+    font-size: 14px;
+    font-weight: 300;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    z-index: 9;
+    pointer-events: all;
+    cursor: pointer;
+}
+.products.homepage li .info label {
+    display: inline-block;
+    vertical-align: middle;
+    
+    background: #fff;
+    border-radius: 3px;
+    padding: 0 5px 0 8px;
+    margin: 1px 0 0 5px;
+    height: 18px;
+    float: right;
+}
+.giohangsp {
+    position: absolute;
+}
+.dathangtaicho  a{
+    width: 30px; 
+    height: 25px; 
+    font-size: small; 
+    padding: 0;
+    text-align: center;
+    top:0
+}
+.dathangtaicho {
+    float: right;
+    margin-right: 10px;
+}
