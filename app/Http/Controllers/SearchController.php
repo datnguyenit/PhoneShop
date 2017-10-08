@@ -51,7 +51,10 @@ class SearchController extends Controller
                 break;
         }
          //handle with select order
+        // dd($order);
         switch ($order) {
+            case null:
+                break;
             case 0:
                 $q->orderBy('price','asc');
                 break;
@@ -61,7 +64,7 @@ class SearchController extends Controller
             default:          
                 break;
         }
-        // dd($request->all());
+        // dd($q->toSql());
         //get all()
         $products = $q->get();
         $manus = manufacturers::get();
@@ -78,12 +81,16 @@ class SearchController extends Controller
 
     //update toàn bộ giá bán của sản phẩm vào cột price vừa tạo
     public function updateAllPrice(){
-        $products = products::get();
+        try{
+            $products = products::get();
 
-        foreach($products as $product){
-            $product->price = ( $product->promotion_price>0)? $product->promotion_price: $product->unit_price;
-            $product->save();
+            foreach($products as $product){
+                $product->price = ( $product->promotion_price>0)? $product->promotion_price: $product->unit_price;
+                $product->save();
+            }
+            return redirect()->back()->with(['mess'=>'Update successfully']);
+        }catch(\Exception $e){
+            return redirect()->back()->with(['mess'=>'Update failed']);
         }
-        echo 'OK';
     }
 }

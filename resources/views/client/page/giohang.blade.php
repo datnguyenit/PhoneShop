@@ -71,7 +71,7 @@
                     </div>
                 </div>
                 <div >
-                    <a href ="DienThoai.jsp" class="btn btn-primary" style="margin-left:30%"  >Tiếp tục mua hàng</a>
+                    <a href ="{{route('dienthoai')}}" class="btn btn-primary" style="margin-left:30%"  >Tiếp tục mua hàng</a>
                     <button class="btn btn-warning btnThanhToanDonHang" id="btnThanhToanDonHang">Đặt hàng và thanh toán</button>
                 </div>
             </div>

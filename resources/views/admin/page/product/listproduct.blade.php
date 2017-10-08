@@ -16,8 +16,8 @@
 	@endif
 	<div class="row">
 		<div class="col-md-12">
-		
 				<a href="{{route('getupdatehotandnew')}}" class="btn btn-success btn-lg">Update HOT and NEW</a>
+				<a href="{{route('updateallprice')}}" class="btn btn-success btn-lg">Update PRICE for SORT</a>
 		</div>
 	</div>
 	<br>
@@ -51,7 +51,7 @@
 								<td>{{$product->id}}</td>
 								<td>{{$product->name}}</td>
 								<td class="object-center"><img src="image/products/{{$product->image}}" alt="{{$product->image}}" height="35px"></td>	
-								<td>{{$product->name_man}}</td>
+								<td>{{$product->manufacturer->name}}</td>
 								<td>{{$product->unit_price}}</td>
 								<td>{{$product->promotion_price}}</td>
 								<td>{{$product->quantity}}</td>

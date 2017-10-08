@@ -116,6 +116,26 @@
 							</div>
 							<div class="form-group">
 								<div class="col-md-3">
+									Type:
+								</div>
+								<div class="col-md-1">
+									<div class="checkbox">
+										<label>
+											<input type="checkbox" id="check-enable-choose-type">
+										</label>
+									</div>
+								</div>
+								<div class="col-md-8">
+									<select name="type_id" id="choose_type_id" class="form-control " disabled>
+										<option selected disabled>-- Choose One --</option>
+										@foreach($types as $type)
+										<option value="{{$type->id}}">{{$type->name}}</option>
+										@endforeach
+									</select>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-md-3">
 									Status:
 								</div>
 								<div class="col-md-9">
@@ -145,4 +165,16 @@
 			</div>
 		</div>
 	</div>
+@endsection
+@section('script')
+	<script>
+		$('#check-enable-choose-type').change(function(){
+			if($(this).is(':checked')){
+				$('#choose_type_id').removeAttr('disabled');
+			}else{
+				$('#choose_type_id').attr('disabled','');
+			}
+			// alert('hi');
+		});
+	</script>
 @endsection

@@ -28,25 +28,22 @@
                                 </li>
                                 <!--Giỏ hàng-->
                             </ul>
-                            <div class="nav navbar-nav dangnhap_nav col-lg-3 col-xs-12 col-md-3 col-sm-2">
+                            <div class="nav navbar-nav col-lg-3 col-xs-12 col-md-3 col-sm-2">
                                 
-
                                 <ul class="nav navbar-nav navbar-right">
-
                                     <li class="navbar-right dropdown">
-                                        <a href = "" class="navbar-right dropdown-toggle" data-toggle="dropdown"><span>Xin Chào:  </span><span class="caret"></span></a>
+                                        @if(Auth::check())
+                                        <a href = "" class="navbar-right dropdown-toggle" data-toggle="dropdown"><span>Xin Chào: {{Auth::user()->name}}</span> <span class="caret"></span></a>
                                         <ul class = "dropdown-menu">
-                                            <li><a href="Admin_QLNhanVien.jsp">Trang quản lý</a></li>
-                                            <li><a href="LogoutServlet">Đăng xuất</a></li>
+                                            <li><a href="{{route('getadminindex')}}">Trang quản lý</a></li>
+                                            <li><a href="{{route('getlogout')}}">Đăng xuất</a></li>
                                         </ul>
-
-                                    </li>		           
+                                        @else
+                                        <a href="{{route('login')}}" ><i class="glyphicon glyphicon-log-in"></i> Đăng nhập </a>
+                                        @endif        
+                                    </li>                  
                                 </ul>
-
-                                
-                                <a href="{{route('login')}}" ><i class="glyphicon glyphicon-log-in"></i> Đăng nhập </a>
-
-                               
+                                                     
                             </div>
                         </div>
                     </div>

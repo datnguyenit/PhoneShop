@@ -11,20 +11,26 @@ use Response;
 
 class CartController extends Controller
 {
-    //
+    //Thêm vao gio hang without ajax
+    public function getPageAddToCart($id){
+        $status = ($this->getAddToCart($id));
+        if($status['status'])
+            return redirect()->back();
+    }
     //các thao tác trên giỏ hàng
-    
     public function getAddToCart($id){
         $product = products::findOrFail($id);
         $mess='';
+        $status=true;
         $price = ($product->promotion_price<=0)?$product->unit_price:$product->promotion_price;
         try{
             Cart::add(['id'=>$id,'name'=>$product->name,'qty'=>1,'price'=>$price,'options'=>['image'=>$product->image]]);
             $mess="Đã thêm vào giỏ hàng";
+            $status=true;
         }catch(\Exception $e){
-            $mess="Thêm vào giỏ hàng thất bại";
+            $mess="Thêm vào giỏ hàng thất bại";$status=false;
         }
-        return ['cart_count'=>Cart::count(),'mess'=>$mess];
+        return ['cart_count'=>Cart::count(),'mess'=>$mess,'status'=>$status];
     }
     public function getCart(){
         return Cart::content();

@@ -8,13 +8,12 @@
                     </div>
                 </div>
                 <div class="col-md-8">
-                    <H2>{{$product->name}}</H2>
+                    <H2><strong>{{$product->name}}</strong></H2>
                     <h4>
                         <span>Màu: {{$product->color}}</span>
                         <span class="color-item" data-toggle="tooltip" data-original-title="+0 vnđ" style="background-color: #000000" title="{{$product->color}}"></span>
                         <span style="margin-left:20px"></span>
-                        <span>Màu Khác:</span>
-                        <a href="DienThoaiSanPham.jsp?sanpham=<%=sp2.getMaSP()%>"><span class="color-item" data-toggle="tooltip" data-original-title="+0 vnđ" style="background-color: #666666" title="<%=mau2.getTenMau()%>"></span></a>
+                       
                     </h4>
                     <h4>
                         <span>Tình trạng:</span> 
@@ -26,24 +25,32 @@
                             @endif
                         </span>
                     </h4>
-                    
+                    @if(count($others)>0)
+                    <h4>
+                        <span>Sản phẩm khác:</span>
+                        @foreach($others as $other)
+                        <span><a href="{{route('dienthoaisanpham',$other->id)}}">{{$other->name}}-{{$other->color}}</a></span>  
+                        @endforeach
+                    </h4>
+                    @endif
+                    @if($product->promotion_price>0)
                     <h3>
                         Giá khuyến mãi:
-                        <span>xxxxxx</span>
+                        <span>{{number_format($product->promotion_price)}} đ</span>
                     </h3>
                     <h3>
-                        Giá cũ: <span style="text-decoration: line-through;">xxxxxx</span>
+                        Giá cũ: <span style="text-decoration: line-through;">{{number_format($product->unit_price)}} đ</span>
                     </h3>
-                   
+                   @else
                     <h3>
                         Giá:
-                        <span>{{$product->unit_price}}</span>
+                        <span>{{number_format($product->unit_price)}} đ</span>
                     </h3>
-                    
-                    <a href="#" class ="btn btn-success">Thêm vào giỏ hàng <i class= "glyphicon glyphicon-shopping-cart"></i></a>
-                    <a href ="#" class="btn btn-sm btn-default">So sánh với</a>
+                    @endif
+                    <a href="{{route('pageaddtocart',$product->id)}}" class ="btn btn-success">Thêm vào giỏ hàng <i class= "glyphicon glyphicon-shopping-cart"></i></a>
+                    <a href ="{{route('popcompare',$product->id)}}" class="btn btn-sm btn-default">So sánh với</a>
                     <h3>
-                        <a href ="GioHang.jsp" class ="btn btn-info"><i class= "glyphicon glyphicon-shopping-cart"></i> Xem giỏ hàng </a>
+                        <a href ="{{route('giohang')}}" class ="btn btn-info"><i class= "glyphicon glyphicon-shopping-cart"></i> Xem giỏ hàng </a>
                     </h3>
                     
                 </div>

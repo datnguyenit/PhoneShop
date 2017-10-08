@@ -26,7 +26,7 @@
                                         @if($product->hot == 1)
                                         <div class="product_hot badge" ><p>Hot</p></div>
                                         @endif
-                                        <a href="DienThoaiSanPham.jsp?sanpham=<%=sp.getMaSP()%>"> 
+                                        <a href="{{route('dienthoaisanpham',$product->id)}}"> 
                                             <img  src="image/products/{{$product->image}}"  alt ="{{$product->image}}"/>
                                             <h3>{{$product->name}}</h3>
                                             <h4>
@@ -71,7 +71,7 @@
                                         @if($product->hot == 1)
                                         <div class="product_hot badge" ><p>Hot</p></div>
                                         @endif
-                                        <a href="DienThoaiSanPham.jsp?sanpham=<%=sp.getMaSP()%>"> 
+                                      <a href="{{route('dienthoaisanpham',$product->id)}}"> 
                                             <img  src="image/products/{{$product->image}}"  alt ="{{$product->image}}"/>
                                             <h3>{{$product->name}}</h3>
                                             <h4>

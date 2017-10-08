@@ -55,7 +55,7 @@
                                 </div>
                                 <div class="form-group">  
                                     <select name="order" class="form-control">
-                                        <option value="" selected disabled>-- Sắp xếp --</option>
+                                        <option selected disabled>-- Sắp xếp --</option>
                                         <option value="0" 
                                         @if(Session::has('order') && session('order')==0)
                                             selected
@@ -95,7 +95,7 @@
                                             @if($product->hot == 1)
                                             <div class="product_hot badge" ><p>Hot</p></div>
                                             @endif
-                                            <a href="DienThoaiSanPham.jsp?sanpham=<%=sp.getMaSP()%>"> 
+                                            <a href="{{route('dienthoaisanpham',$product->id)}}"> 
                                                 <img  src="image/products/{{$product->image}}"  alt ="{{$product->image}}"/>
                                                 <h3>{{$product->name}}</h3>
                                                 <h4>

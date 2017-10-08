@@ -17,7 +17,7 @@ Route::get('/', function () {
 Route::get('admin',function(){
 	return view('admin.layout.master');
 });
-Route::get('index',['as'=>'index','uses'=>'HomeController@getIndex']);
+Route::get('index',['as'=>'index','uses'=>'HomeController@getIndex'])->middleware('preventback');
 
 Route::get('dienthoaisanpham/{id}',['as'=>'dienthoaisanpham','uses'=>'HomeController@getDienThoaiSanPham']);
 Route::get('login',['as'=>'login','uses'=>'HomeController@getLogin']);
@@ -32,6 +32,7 @@ Route::get('doimatkhau',['as'=>'doimatkhau','uses'=>'HomeController@getDoiMatKha
 
 // giỏ hàng
 Route::get('add-to-cart/{id}',['as'=>'addtocart','uses'=>'CartController@getAddToCart']);
+Route::get('page-add-to-cart/{id}',['as'=>'pageaddtocart','uses'=>'CartController@getPageAddToCart']);
 Route::get('cart-content',['as'=>'cartcontent','uses'=>'CartController@getCart']);
 // 	update giỏ hàng
 Route::get('update-cart/{rowid}/{qty}',['as'=>'updatecart','uses'=>'CartController@updateCart']);
@@ -49,7 +50,7 @@ Route::get('compare/{id1}/{id2}',['as'=>'compare','uses'=>'HomeController@getCom
 
 //Quản lý pop up so sánh sản phẩm
 Route::get('add-popcompare/{id}',['as'=>'popcompare','uses'=>'HomeController@addPopCompare']);
-Route::get('remove-popcompare/{pos}',['as'=>'popcompare','uses'=>'HomeController@removePopCompare']);
+Route::get('remove-popcompare/{pos}',['as'=>'removepopcompare','uses'=>'HomeController@removePopCompare']);
 
 
 
@@ -101,6 +102,9 @@ Route::group(['prefix'=>'admin','middleware'=>['admin','preventback']],function(
 
 		//update hot and new
 		Route::get('update-hot-and-new',['as'=>'getupdatehotandnew','uses'=>'ProductController@getUpdateHotAndNew']);
+
+		//update create type
+		Route::get('create-type',['as'=>'getcreatetype','uses'=>'ProductController@getCreateType']);
 	});
 	//Bills
 	Route::group(['prefix'=>'adminbill'],function(){
@@ -178,6 +182,15 @@ Route::group(['prefix'=>'admin','middleware'=>['admin','preventback']],function(
 		//Get product from stock
 		Route::get('exportproduct/{user}/{id}',['as'=>'getexportproduct','uses'=>'ExportController@getExportProduct']);
 
+	});
+
+
+	//Statistic
+	
+	Route::group(['prefix'=>'statistic'],function(){
+		//list waiting receipt
+		Route::get('statisticproduct',['as'=>'getstatisticproduct','uses'=>'ProductController@getStatisticProduct']);
+		
 	});
 });
 

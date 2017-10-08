@@ -7,6 +7,7 @@ use App\products;
 use App\bills;
 use App\bill_detail;
 use App\manufacturers;
+use App\type_product;
 use Cart;
 use DateTime;
 use Response;
@@ -23,7 +24,9 @@ class HomeController extends Controller
    
     public function getDienThoaiSanPham($id){
         $product = products::findOrFail($id);
-    	return view('client.page.dienthoaisanpham',compact('product'));
+        $type_id = type_product::where('product_id',$product->id)->first()->type_id;
+        $others = type_product::where('type_id',$type_id)->where('product_id','<>',$product->id)->join('products','type_product.product_id','=','products.id')->select('products.*')->get();
+    	return view('client.page.dienthoaisanpham',compact('product','others'));
     }
     public function getLogin(){
     	return view('client.page.login');

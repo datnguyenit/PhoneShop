@@ -71,7 +71,8 @@ $('#form-create-product').validate({
 			required:true,
 			number: true,
 			range: [0,100000000],
-			step:1000
+			step:1000,
+			max: '#unit_price',
 		},
 		OS: "required",
 		memory: "required",
@@ -80,12 +81,15 @@ $('#form-create-product').validate({
 		color: "required",
 
 		manufacturer_id: 'required',
+		type_id: 'required',
 	},
 	submitHandler: function(form){
 		//alert('OK');
 		form.submit();
 	}
 });
+
+
 // form edit product 
 $('#form-edit-product').validate({
 	rules:{
@@ -110,6 +114,7 @@ $('#form-edit-product').validate({
 		color: "required",
 
 		manufacturer_id: 'required',
+		type_id: 'required',
 	},
 	submitHandler: function(form){
 		// alert('OK');
